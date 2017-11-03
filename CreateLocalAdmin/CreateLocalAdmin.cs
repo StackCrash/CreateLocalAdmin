@@ -50,6 +50,7 @@ namespace CreateLocalAdmin
 
         static int Main(string[] args)
         {
+            /* Uncomment to pass use commandline arguments
             if (args.Length == 0)
             {
                 WriteHelper();
@@ -60,11 +61,14 @@ namespace CreateLocalAdmin
                 WriteHelper();
                 return 1;
             }
-
+            */
             try
             {
+                /* Uncomment to pass use commandline arguments
                 string UserName = args[0];
                 string Password = args[1];
+                */
+
 
                 DirectoryEntry NewUser = CreateLocalAccount(UserName, Password);
                 AddLocalAdmin(NewUser);
